@@ -36,5 +36,5 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: Extent-Report
-        path: test-output/
+        path: test-output/extent-report.html  # Or use test-output/**/* if you want all files
 
