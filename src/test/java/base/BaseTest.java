@@ -29,6 +29,10 @@ public class BaseTest {
         options.addArguments("--disable-save-password-bubble");
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
         options.setExperimentalOption("useAutomationExtension", false);
+        
+     // Set a unique user data directory
+        String uniqueUserDataDir = System.getProperty("java.io.tmpdir") + "/chrome-user-data-" + System.currentTimeMillis();
+        options.addArguments("--user-data-dir=" + uniqueUserDataDir);
 
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
