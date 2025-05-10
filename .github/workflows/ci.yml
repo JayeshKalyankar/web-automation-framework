@@ -33,7 +33,7 @@ jobs:
       run: mvn clean test
 
     - name: Upload Test Reports
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: Extent-Reports
         path: test-output/ExtentReport.html  # Correct file name for the report
